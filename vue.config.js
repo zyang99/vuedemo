@@ -1,8 +1,7 @@
 // 类似webpack配置
 module.exports = {
-  publicPath:'/vuedemo',
+  publicPath:process.env.NODE_ENV === 'production' ? '/vuedemo/' : '/' ,
   devServer:{
-    port:3000,
     open:true
   }
 }
